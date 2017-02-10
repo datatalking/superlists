@@ -7,6 +7,7 @@ class NewVisitorTest(unittest.TestCase):
 
 	def setUp(self):
 		self.browser = webdriver.Firefox()
+		self.browser.implicitly_wait(3)
 
 	def tearDown(self):
 		self.browser.quit()
@@ -19,6 +20,13 @@ class NewVisitorTest(unittest.TestCase):
 		# She notices the page title and header mention todo lists
 		self.assertIn('To-Do', self.browser.title)
 		self.fail('Finish the test!')
+
+		# git pull - ... pull the most current version written.
+		# git status - ... gives me info with changes i'm committing
+		# git commit -m "Comments" ... gives comments to my changes
+		# git push ... send changes to repo
+		# learn more forking
+		# master
 
 		# She is invited to enter a to-do item straight away
 		# browser = webdriver.Firefox()
